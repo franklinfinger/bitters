@@ -6,7 +6,7 @@ var $ = require('jquery');
 var modelView = require('./bittersModelView');
 
 module.exports = Backbone.View.extend({
-  el: '.main-page',
+  el: '.container',
   initialize: function (){
     this.addAll();
     this.listenTo(this.collection, "update",

@@ -9,7 +9,7 @@ var tmpl = require('./template');
 module.exports = Backbone.View.extend({
   collection: null,
   model: null,
-  el: ".form",
+  el: ".navbar",
   template: _.template(tmpl.addBitter),
   events: {
     "submit form": "addBitter"
@@ -18,18 +18,17 @@ module.exports = Backbone.View.extend({
     event.preventDefault();
     this.model.set({
       name: this.$el.find("input[name='name']").val(),
-      bitter: this.$el.find("input[name='bitter']").val(),
-
+      bitter: this.$el.find("input[name='bitter']").val()
     });
     this.$el.find("input").val(""),
     this.$el.find("textarea").val(""),
     this.collection.add(this.model);
     console.log(this.collection);
-    this.model = new BittersModelView({});
+    this.model = new BittersModel({});
   },
   initialize: function() {
     if(!this.model) {
-      this.model= new BittersModelView({});
+      this.model= new BittersModel({});
     }
     this.render();
   },

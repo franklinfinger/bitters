@@ -5,13 +5,13 @@ var tmpl = require('./template');
 
 module.exports = Backbone.View.extend({
   model: null,
-  className: ".main-page",
+  tagName: "article",
   template: _.template(tmpl.bitter),
   templateEdit: _.template(tmpl.editBitter),
   events: {
     "click .delete": "removeBitter",
     "click .showEdit": "toggleEdit",
-    "click .editMovie": "editBitter"
+    "click .editBitter": "editBitter"
   },
   editBitter: function(event){
     event.preventDefault();

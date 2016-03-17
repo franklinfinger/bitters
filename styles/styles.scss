@@ -14,31 +14,28 @@ header h6 {
   color: #53C9BC;
 }
 .container {
-  width: 100%;
-  margin: 0 auto;
-}
-.main-page {
   width: 80%;
-  height: 600px;
-  // overflow-x: hidden;
-  // overflow-y: scroll;
-  // height: 652px;
-  border: 2px solid blue;
-  // :hover {
-  //   background-color: #eee;
-  //   cursor: pointer;
-}
-.main-page h3 {
-  display: inline-block;
-  margin: 0;
-  // padding: 10px 0 0 10px;
-}
-.bitterText {
-  position: relative;
-  margin: 0;
-  font-weight: 300;
+  margin: 0 auto;
+  background-color: lightblue;
 }
 
-.form {
-  border: 1px solid black;
+article {
+  border-bottom: 2px solid lightgreen;
 }
+
+.navbar {
+  border: 2px dotted yellow;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+.edit {
+  font-size: 1.2em;
+  background-color: #00cc00;
+}
+
+.delete {
+  font-size: 1.2em;
+  background-color: #ff6666;
+  margin-top: 10px;
+  margin-bottom: 10px;

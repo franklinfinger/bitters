@@ -13,19 +13,19 @@ module.exports = {
       '<input class="editRant" type="text" value="<%= bitter %>">',
       '</div>',
       '<div class="editForm">',
-      '<button type="submit" class="editText" name="submit">Edit Bitter</button>',
+      '<button type="submit" class="editBitters" name="submit">Edit Bitter</button>',
       '</div>'
   ].join(''),
 
   addBitter: [
     '<form class="">',
       '<div class="addForm">',
-        '<input type="text" name="bitter" placeholder="let us be bitter">',
+        '<input type="textarea" name="bitter" placeholder="let us be bitter">',
       '</div>',
       '<div class="addForm">',
-      '<input class="addName"type="text" name="name" placeholder="Name">',
+        '<input type="text" name="name" placeholder="Name">',
       '<div class="addForm">',
-      '<input class="addBitter" type="submit" name="Submit">',
+        '<input type="submit" name="Submit">',
       '</div>',
     '</form>'
   ].join("")
