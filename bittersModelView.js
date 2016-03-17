@@ -1,9 +1,9 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
-var tmpl = require('/templates');
+var tmpl = require('./template');
 
-model.exports = Backbone.View.extend({
+module.exports = Backbone.View.extend({
   model: null,
   className: ".main-page",
   template: _.template(tmpl.bitter),

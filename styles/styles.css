@@ -1,2 +1,33 @@
-body {
-  width: 100%; }
+header {
+  text-align: center;
+  font-size: 1.6em;
+  font-family: Oldtown, fantasy;
+  border: 3px solid red; }
+
+header h1 {
+  color: #9E53C9;
+  margin-bottom: -40px; }
+
+header h6 {
+  color: #53C9BC; }
+
+.container {
+  width: 100%;
+  margin: 0 auto; }
+
+.main-page {
+  width: 80%;
+  height: 600px;
+  border: 2px solid blue; }
+
+.main-page h3 {
+  display: inline-block;
+  margin: 0; }
+
+.bitterText {
+  position: relative;
+  margin: 0;
+  font-weight: 300; }
+
+.form {
+  border: 1px solid black; }

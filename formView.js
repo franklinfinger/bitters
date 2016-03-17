@@ -3,10 +3,10 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
-var tmpl = require('/templates');
+var tmpl = require('./template');
 
 
-model.exports = Backbone.View.extend({
+module.exports = Backbone.View.extend({
   collection: null,
   model: null,
   el: ".form",
@@ -25,11 +25,11 @@ model.exports = Backbone.View.extend({
     this.$el.find("textarea").val(""),
     this.collection.add(this.model);
     console.log(this.collection);
-    this.model = new BitterModelView({});
+    this.model = new BittersModelView({});
   },
   initialize: function() {
     if(!this.model) {
-      this.model= new BitterModelView({});
+      this.model= new BittersModelView({});
     }
     this.render();
   },
