@@ -19,14 +19,11 @@ module.exports = {
 
   addBitter: [
     '<form class="">',
-      '<div class="addForm">',
-        '<input type="textarea" name="bitter" placeholder="let us be bitter">',
-      '</div>',
-      '<div class="addForm">',
-        '<input type="text" name="name" placeholder="Name">',
-      '<div class="addForm">',
-        '<input type="submit" name="Submit">',
-      '</div>',
+      '<textarea name="bitter" rows="5" cols"40" placeholder="let us be bitter"</textarea>',
+      '<input type="text" name="name" placeholder="Name">',
+      '<button class="submitBitter" type="submit" name="button">Add Bitter</button>',
     '</form>'
   ].join("")
 }
+
+module.exports = templates;

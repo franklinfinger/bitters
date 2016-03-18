@@ -4,36 +4,33 @@ var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
 var tmpl = require('./template');
+var BittersModel = require('./bittersModel');
+var BittersCollection = require('./bittersCollection')
 
 
 module.exports = Backbone.View.extend({
-  collection: null,
-  model: null,
-  el: ".navbar",
+  el: ".bitterAdd",
   template: _.template(tmpl.addBitter),
   events: {
-    "submit form": "addBitter"
+    "submit .submitBitter": "addBitter",
   },
   addBitter: function(event) {
     event.preventDefault();
-    this.model.set({
+    var newBitter = {
       name: this.$el.find("input[name='name']").val(),
-      bitter: this.$el.find("input[name='bitter']").val()
+      post: this.$el.find("input[name='bitter']").val()
     });
-    this.$el.find("input").val(""),
-    this.$el.find("textarea").val(""),
-    this.collection.add(this.model);
-    console.log(this.collection);
-    this.model = new BittersModel({});
-  },
+    var newBitterRant = new BitterModel(newBitter)
+    this.$el.find('input').val('');
+    this.$el.find('textarea').val('');
+    newBitterRant.save();
+   },
   initialize: function() {
-    if(!this.model) {
-      this.model= new BittersModel({});
-    }
+    this.model = new BitterModel({});
     this.render();
   },
   render: function() {
-    var markup = this.template(this.model.toJSON());
+    var markup = this.template(this.model.toJSON);
     this.$el.html(markup);
     return this;
   }

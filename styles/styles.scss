@@ -15,18 +15,28 @@ header h6 {
 }
 .container {
   width: 80%;
+  height: 400px;
   margin: 0 auto;
   background-color: lightblue;
 }
 
 article {
   border-bottom: 2px solid lightgreen;
+
 }
 
-.navbar {
-  border: 2px dotted yellow;
+.section {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
   background-color: lightgrey;
+}
+
+.bitterAdd {
+  border: 2px dotted yellow;
   text-align: center;
+  width: 100%;
+
 }
 
 .edit {
@@ -39,3 +49,4 @@ article {
   background-color: #ff6666;
   margin-top: 10px;
   margin-bottom: 10px;
+}

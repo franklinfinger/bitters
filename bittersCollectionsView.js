@@ -3,18 +3,17 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
 var $ = require('jquery');
-var modelView = require('./bittersModelView');
+var BittersModelView = require('./bittersModelView');
 
 module.exports = Backbone.View.extend({
   el: '.container',
   initialize: function (){
     this.addAll();
-    this.listenTo(this.collection, "update",
-    this.addAll);
+    this.listenTo(this.collection, "update", this.addAll);
   },
 
   addOne: function(el) {
-    var modelView = new bittersModelView({model: el});
+    var modelView = new BittersModelView({model: el});
     this.$el.append(modelView.render().el);
   },
 

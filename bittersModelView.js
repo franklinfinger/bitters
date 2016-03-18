@@ -7,7 +7,7 @@ module.exports = Backbone.View.extend({
   model: null,
   tagName: "article",
   template: _.template(tmpl.bitter),
-  templateEdit: _.template(tmpl.editBitter),
+  template: _.template(tmpl.editBitter),
   events: {
     "click .delete": "removeBitter",
     "click .showEdit": "toggleEdit",
